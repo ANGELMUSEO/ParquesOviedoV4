@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'maintitle';
+    src: url(AveriaSerifLibre-Bold.ttf);
+}
+@font-face {
+    font-family: 'paraiso';
+    src: url(TheNautigal-Bold.ttf);
+}
+.maintitle{
+    font-family: 'maintitle';
+    color: white;
+    font-size: 70pt;
+    z-index: 60;
+    position: absolute;
+    top: 250px;
+    left: 37%;
+}
+
+.text-justificado{
+  text-align: justify;
+}
+.maintitleMovil{
+  font-family: 'maintitle';
+  color: white;
+  font-size: 40pt;
+  z-index: 60;
+  position: absolute;
+  top: 120px;
+  left: 27%;
+}
+
+
+.paraiso{
+    font-family: 'paraiso';
+    color: white;
+    font-size: 45pt;
+    text-decoration: overline;
+    position: absolute;
+    top: 390px;
+    left: 41%;
+    letter-spacing: 2px;
+}
+.paraisoMovil{
+  font-family: 'paraiso';
+  color: white;
+  font-size: 25pt;
+  text-decoration: overline;
+  position: absolute;
+  top: 180px;
+  left: 31%;
+  letter-spacing: 2px;
+}
+.boton{
+    position: absolute;
+    top: 800px;
+    right:50px;
+}
+
+/* nuevo solo giro
+
+
+.rotateY {
+    transform: rotateY(360deg);
+}
+*/
+
+/* giro imagen*/
+.imagenCovid {
+    transition: transform 2s;
+}
+
+
+.rotateY {
+    transform: rotateY(180deg);
+}
+
+
+
+/*rota con active la card de pagina 3*/
+.cardPar {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.cardPar:hover {
+    transform: rotateY(180deg);
+    opacity: 0.5;
+}
+
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft2 {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .cardEspecial1 {
+    animation: slideInLeft 1s 1s ease-out;
+  }
+  .cardEspecial2 {
+    animation: slideInLeft2 1s 1s ease-out;
+  }
+
+ /*LO ANTERIOR CON efecto entrada CON scroll con un retardo
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft2 {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+    */
+    /* Ocultar inicialmente 
+  .cardEspecial1 {
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .cardEspecial1.show {
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+  
+  .cardEspecial2 {
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .cardEspecial2.show {
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+*/
+/* ocultamos las cards que salen por abajo*/
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contenedorCards {
+  opacity: 0; /* Ocultar inicialmente */
+  transform: translateY(100%); /* Posicionar fuera de la vista inicialmente */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.contenedorCards.show {
+  opacity: 1; /* Mostrar cuando se agrega la clase 'show' */
+  transform: translateY(0); /* Animar a su posición original */
+}
+
+
+  /*ocultar la clase repetida*/
+
+  .bg-degradado {
+    background: linear-gradient(to right, rgb(4, 4, 147),rgb(66, 66, 244));
+  }
+
+  .text-degradado{
+    color:rgb(25, 25, 213);
+  }
+
+  .filtro-azulado{
+    filter: grayscale(70%);
+  }
+
+  /*imagen gif animada*/
+  .hero-image2 {
+    background-image: url('../img/gif/Gift5.gif');
+    height:15em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 	0%;
+    bottom: 0%;
+    /* filter:grayscale(80%) */
+}
+
+.hero-text3{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
